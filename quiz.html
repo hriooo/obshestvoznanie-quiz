@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тест — Тренажёр по обществознанию</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav-links">
+    <a href="index.html">← На главную</a>
+    <a href="review.html">📋 Мои ошибки</a>
+  </div>
+
+  <div class="quiz-header">
+    <h2 id="quizTitle">Загрузка...</h2>
+    <div id="quizMeta" style="font-size:13px;color:var(--text-muted)"></div>
+  </div>
+
+  <div class="card" id="instructionsCard">
+    <p style="margin:0 0 10px">
+      В некоторых вопросах правильный ответ — один вариант, в некоторых — два или три (отмечайте все, которые считаете верными).
+      Как на реальном экзамене: за выбор лишнего варианта или неполный ответ балл снижается, но не всегда обнуляется полностью.
+    </p>
+    <label style="font-size:14px;">
+      Количество вопросов в этой попытке:
+      <select id="lengthSelect" class="filter-select">
+        <option value="0">Все вопросы раздела</option>
+        <option value="10">10 (короткая тренировка)</option>
+        <option value="20">20</option>
+      </select>
+    </label>
+    <div style="margin-top:14px">
+      <button class="btn" id="startBtn">Начать тест</button>
+    </div>
+  </div>
+
+  <form id="quizForm" style="display:none"></form>
+
+  <div id="summaryContainer"></div>
+</div>
+
+<script src="data/meta.js"></script>
+<script src="data/section1.js"></script>
+<script src="data/section2.js"></script>
+<script src="data/section3.js"></script>
+<script src="data/section4.js"></script>
+<script src="data/section5.js"></script>
+<script src="data/section6.js"></script>
+<script src="data/section7.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>

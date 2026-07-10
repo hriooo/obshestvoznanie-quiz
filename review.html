@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мои ошибки — Тренажёр по обществознанию</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav-links">
+    <a href="index.html">← На главную</a>
+  </div>
+
+  <header class="site-header">
+    <h1>Мои ошибки</h1>
+    <p>Вопросы, на которые в последний раз вы ответили не полностью верно. Решите их ещё раз — как только ответите правильно, вопрос пропадёт из этого списка.</p>
+  </header>
+
+  <div class="card" style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+    <label style="font-size:14px;">Раздел:
+      <select id="sectionFilter" class="filter-select">
+        <option value="">Все разделы</option>
+      </select>
+    </label>
+    <span id="mistakesCount" style="font-size:13px;color:var(--text-muted)"></span>
+  </div>
+
+  <div id="mistakesList"></div>
+</div>
+
+<script src="data/meta.js"></script>
+<script src="data/section1.js"></script>
+<script src="data/section2.js"></script>
+<script src="data/section3.js"></script>
+<script src="data/section4.js"></script>
+<script src="data/section5.js"></script>
+<script src="data/section6.js"></script>
+<script src="data/section7.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/review.js"></script>
+</body>
+</html>

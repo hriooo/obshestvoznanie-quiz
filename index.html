@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тренажёр по обществознанию — вступительные испытания</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <header class="site-header">
+    <h1>Тренажёр по обществознанию</h1>
+    <p>Тесты по программе вступительного испытания — 7 разделов, 245 вопросов. Прогресс сохраняется в этом браузере автоматически.</p>
+  </header>
+
+  <div class="nav-links">
+    <a href="review.html">📋 Мои ошибки</a>
+    <button id="resetAllBtn">🗑️ Сбросить весь прогресс</button>
+  </div>
+
+  <div class="overall-card">
+    <div class="big-pct" id="overallPct">0%</div>
+    <div class="label" id="overallLabel">Общий прогресс по всем разделам</div>
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" id="overallBar" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="section-grid" id="sectionGrid"></div>
+
+  <footer class="site-footer">
+    Данные хранятся локально (localStorage) в этом браузере на этом устройстве.
+  </footer>
+</div>
+
+<script src="data/meta.js"></script>
+<script src="data/section1.js"></script>
+<script src="data/section2.js"></script>
+<script src="data/section3.js"></script>
+<script src="data/section4.js"></script>
+<script src="data/section5.js"></script>
+<script src="data/section6.js"></script>
+<script src="data/section7.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
