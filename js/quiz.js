@@ -44,7 +44,7 @@
 
       var hint = q.correct.length === 1
         ? "Выберите один правильный вариант"
-        : "Выберите " + q.correct.length + " правильных варианта(ов)";
+        : "Выберите " + q.correct.length + " правильных " + ruPlural(q.correct.length, ["вариант", "варианта", "вариантов"]);
 
       var optionsHtml = q.options.map(function (opt, i) {
         return (

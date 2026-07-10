@@ -34,8 +34,10 @@
     var sectionFilter = sectionSelect.value ? Number(sectionSelect.value) : undefined;
     var mistakes = getMistakes(sectionFilter);
     var listEl = document.getElementById("mistakesList");
+    var mistakeWord = ruPlural(mistakes.length, ["вопрос", "вопроса", "вопросов"]);
+    var mistakeVerb = (mistakes.length % 10 === 1 && mistakes.length % 100 !== 11) ? "требует" : "требуют";
     document.getElementById("mistakesCount").textContent =
-      mistakes.length + (mistakes.length === 1 ? " вопрос требует повторения" : " вопрос(ов) требуют повторения");
+      mistakes.length + " " + mistakeWord + " " + mistakeVerb + " повторения";
 
     if (mistakes.length === 0) {
       listEl.innerHTML =
