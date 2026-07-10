@@ -40,11 +40,32 @@
     });
   }
 
-  document.getElementById("resetAllBtn").addEventListener("click", function () {
-    if (confirm("Точно сбросить весь прогресс по всем разделам? Это действие нельзя отменить.")) {
-      resetAll();
-      render();
+  // Подтверждение сброса прямо в кнопке (без нативного confirm()):
+  // первый клик переводит кнопку в состояние "точно?", второй клик в течение
+  // 4 секунд действительно всё сбрасывает. Клик мимо или пауза — отмена.
+  var resetBtn = document.getElementById("resetAllBtn");
+  var resetArmed = false;
+  var resetTimer = null;
+  var resetDefaultLabel = resetBtn.textContent;
+
+  function disarmReset() {
+    resetArmed = false;
+    resetBtn.textContent = resetDefaultLabel;
+    resetBtn.classList.remove("danger-armed");
+    if (resetTimer) { clearTimeout(resetTimer); resetTimer = null; }
+  }
+
+  resetBtn.addEventListener("click", function () {
+    if (!resetArmed) {
+      resetArmed = true;
+      resetBtn.textContent = "⚠️ Точно сбросить? Нажмите ещё раз";
+      resetBtn.classList.add("danger-armed");
+      resetTimer = setTimeout(disarmReset, 4000);
+      return;
     }
+    disarmReset();
+    resetAll();
+    render();
   });
 
   render();
