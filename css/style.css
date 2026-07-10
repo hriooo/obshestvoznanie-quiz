@@ -73,6 +73,13 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 
+.nav-links button.danger-armed {
+  background: var(--red-bg);
+  border-color: var(--red);
+  color: var(--red);
+  font-weight: 600;
+}
+
 .overall-card {
   background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   color: white;
